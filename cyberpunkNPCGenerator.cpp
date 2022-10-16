@@ -17,9 +17,12 @@ int main()
 		return -1;
 	}
 
-	cout << "Please give the NPC a handle" << endl; //NOTE FOR FUTURE SELF: ADD RANDOM NAME GENERATOR
+	cout << "Please give the NPC a handle (--random for a random handle)" << endl; //NOTE FOR FUTURE SELF: ADD RANDOM NAME GENERATOR
 	cin.get(handleInput, 50);
-	storage.handle = handleInput;
+	if (strcmp(handleInput, "--random") == 0)
+		storage.handle = nameGenerator();
+	else
+		storage.handle = handleInput;
 	output.open(storage.handle + ".txt");
 	if (!output.is_open())
 	{
@@ -50,6 +53,64 @@ int main()
 	outputCharacter(input, output, storage);
 
 	return 0;
+}
+
+string nameGenerator()
+{
+	ifstream firstInput;
+	ifstream secondInput;
+	ifstream thirdInput;
+	int nameCount = (rand() % 3) + 1;
+	int loopFind1, loopFind2, loopFind3;
+	int i = 0;
+	string result = "random";
+	string first, last, nick;
+
+	firstInput.open("firstName.txt");
+	secondInput.open("lastName.txt");
+	thirdInput.open("nickName.txt");
+
+	loopFind1 = (rand() % 20) + 2;
+	loopFind2 = (rand() % 20) + 2;
+	loopFind3 = (rand() % 20) + 2;
+
+	while (i < loopFind1)
+	{
+		first.clear();
+		getline(firstInput, first);
+		i = i + 1;
+	}
+	i = 0;
+	while (i < loopFind2)
+	{
+		last.clear();
+		getline(secondInput, last);
+		i = i + 1;
+	}
+	i = 0;
+	while (i < loopFind3)
+	{
+		nick.clear();
+		getline(thirdInput, nick);
+		i = i + 1;
+	}
+
+	if(nameCount == 1)
+		return nick;
+
+	if (nameCount == 2)
+	{
+		result.clear();
+		result = first + ' ' + last;
+	}
+
+	if (nameCount == 3)
+	{
+		result.clear();
+		result = first + " \"" + nick + "\" " + last;
+	}
+
+	return result;
 }
 
 void arraySet(int skills[])

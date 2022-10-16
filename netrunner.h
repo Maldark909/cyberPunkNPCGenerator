@@ -33,6 +33,7 @@ struct character
 	int skills[66];
 };
 
+string nameGenerator();
 void skillsGenerator(int storage[], int skillDouble = 0);
 void edgerunnerStatGenerator(int statBlock[][10], int stats[]);
 void determineGenerator(string classInput, character& storage);
