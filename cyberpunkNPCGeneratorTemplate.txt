@@ -1,0 +1,147 @@
+
+________/\\\\\\\\\________________/\\\__________________________________________________________________________________________________________/\\\\\\\\\______/\\\\\\\\\\\\\\\__/\\\\\\\\\\\\____        
+ _____/\\\////////________________\/\\\________________________________________________________________________________/\\\____________________/\\\///////\\\___\/\\\///////////__\/\\\////////\\\__       
+  ___/\\\/______________/\\\__/\\\_\/\\\_______________________________________/\\\\\\\\\______________________________\/\\\___________________\/\\\_____\/\\\___\/\\\_____________\/\\\______\//\\\_      
+   __/\\\_______________\//\\\/\\\__\/\\\____________/\\\\\\\\___/\\/\\\\\\\___/\\\/////\\\__/\\\____/\\\__/\\/\\\\\\___\/\\\\\\\\______________\/\\\\\\\\\\\/____\/\\\\\\\\\\\_____\/\\\_______\/\\\_     
+    _\/\\\________________\//\\\\\___\/\\\\\\\\\____/\\\/////\\\_\/\\\/////\\\_\/\\\\\\\\\\__\/\\\___\/\\\_\/\\\////\\\__\/\\\////\\\____________\/\\\//////\\\____\/\\\///////______\/\\\_______\/\\\_    
+     _\//\\\________________\//\\\____\/\\\////\\\__/\\\\\\\\\\\__\/\\\___\///__\/\\\//////___\/\\\___\/\\\_\/\\\__\//\\\_\/\\\\\\\\/_____________\/\\\____\//\\\___\/\\\_____________\/\\\_______\/\\\_   
+      __\///\\\___________/\\_/\\\_____\/\\\__\/\\\_\//\\///////___\/\\\_________\/\\\_________\/\\\___\/\\\_\/\\\___\/\\\_\/\\\///\\\_____________\/\\\_____\//\\\__\/\\\_____________\/\\\_______/\\\__  
+       ____\////\\\\\\\\\_\//\\\\/______\/\\\\\\\\\___\//\\\\\\\\\\_\/\\\_________\/\\\_________\//\\\\\\\\\__\/\\\___\/\\\_\/\\\_\///\\\___________\/\\\______\//\\\_\/\\\\\\\\\\\\\\\_\/\\\\\\\\\\\\/___ 
+        _______\/////////___\////________\/////////_____\//////////__\///__________\///___________\/////////___\///____\///__\///____\///____________\///________\///__\///////////////__\////////////_____
+
+Handle: ??HANDLE
+
+Role: ??ROLE
+
+Role Ability: ??ROLEABILITY
+Rank: ??ROLERANK
+
+Health: >>HEALTH
+SeriousWound: >>SERIOUSWOUND
+DeathSave: >>DEATHSAVE
+Humanity: >>HUMANITY
+
+
+Stats:
+
+
+Int: >>INTEL
+Ref: >>REF
+Dex: >>DEX
+Tech: >>TECH
+Cool: >>COOL
+Will: >>WILL
+Luck: >>LUCK
+Move: >>MOVE
+Body: >>BODY
+Emp: >>EMP
+
+
+Skills:
+
+
+Awareness Skills:
+
+Concentration (WILL): ###CONCENTRATION
+Conceal/Reveal Object (INT): ###CONCEALOBJECT
+Lip Reading (INT): ###LIPREADING
+Perception (INT): ###PERCEPTION
+Tracking (INT): ###TRACKING
+
+
+Body Skills:
+
+Athletics (DEX): ###ATHLETICS
+Contortionist (DEX): ###CONTORTIONIST
+Dance (DEX): ###DANCE
+Endurance (WILL): ###ENDURANCE
+Resist Torture/Drugs (WILL): ###RESISTTORTURE
+Stealth (DEX): ###STEALTH
+
+
+Control Skills:
+
+Drive Land Vehicle (REF): ###DRIVELAND
+Pilot Air Vehicle (REF): ###PILOTAIR
+Pilot Sea Vehicle (REF): ###PILOTSEA
+Riding (REF): ###RIDING
+
+
+Education Skills:
+
+Accounting (INT): ###ACCOUNTING
+Animal Handling (INT): ###ANIMALHANDLING
+Bureaucracy (INT): ###BUREAUCRACY
+Business (INT): ###BUSINESS
+Composition (INT): ###COMPOSITION
+
+Criminology (INT): ###CRIMINOLOGY
+Cryptography (INT): ###CRYPTOGRAPHY
+Deduction (INT): ###DEDUCTION
+Education (INT): ###EDUCATION
+Gamble (INT): ###GAMBLE
+
+Language (INT): ###LANGUAGE
+Library Search (INT): ###LIBRARYSEARCH
+Local Expert (INT): ###YOURHOME
+Science (INT): ###SCIENCE
+Tactics (INT): ###TACTICS
+Wilderness Survival (INT): ###WILDERNESSSURVIVAL
+
+
+Fighting Skills:
+
+Brawling (DEX): ###BRAWLING
+Evasion (DEX): ###EVASION
+Martial Arts (x2) (DEX): ###MARTIALARTS
+Melee Weapon (DEX): ###MELEEWEAPON
+
+
+Performance Skills:
+
+Acting (COOL): ###ACTING
+Play Instrument (TECH): ###PLAYINSTRUMENT
+
+
+Ranged Weapon Skills:
+
+Archery (REF): ###ARCHERY
+Autofire (x2) (REF): ###AUTOFIRE
+Handgun (REF): ###HANDGUN
+Heavy Weapons (x2) (REF): ###HEAVYWEAPON
+Shoulder Arms (REF): ###SHOULDERARMS
+
+
+Social Skills:
+
+Bribery (COOL): ###BRIBERY
+Conversation (EMP): ###CONVERSATION
+Human Perception (EMP): ###HUMANPERCEPTION
+Interrogation (COOL): ###INTERROGATION
+Persuasion (COOL): ###PERSUASION
+
+Personal Grooming (COOL): ###PERSONALGROOMING
+Streetwise (COOL): ###STREETWISE
+Trading (COOL): ###TRADING
+Wardrobe & Style (COOL): ###WARDROBE
+
+
+Technique Skills:
+
+Air Vehicle Tech (TECH): ###AIRVEHICLETECH
+Basic Tech (TECH): ###BASICTECH
+Cybertech (TECH): ###CYBERTECH
+Demolitions (x2) (TECH): ###DEMOLITIONS
+Electronics/Security Tech (x2) (TECH): ###ELECTRONICSSECURITYTECH
+
+First Aid (TECH): ###FIRSTAID
+Forgery (TECH): ###FORGERY
+Land Vehicle Tech (TECH): ###LANDVEHICLETECH
+Paint/Draw/Sculpt (TECH): ###PAINTDRAWSCULPT
+Paramedic (x2) (TECH): ###PARAMEDIC
+
+Photography/Film (TECH): ###PHOTOGRAPHYFILM
+Pick Lock (TECH): ###PICKLOCK
+Pick Pocket (TECH): ###PICKPOCKET
+Sea Vehicle Tech (TECH): ###SEAVEHICLETECH
+Weaponstech (TECH): ###WEAPONSTECH
