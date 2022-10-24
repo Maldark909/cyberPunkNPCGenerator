@@ -28,12 +28,14 @@ struct character
 	string handle;
 	string role;
 	string roleAbility;
+	string backstory;
 	int roleRank = 0;
 	int stats[14];
 	int skills[66];
 };
 
 string nameGenerator();
+string backstoryGenerator(int roleFlag);
 void skillsGenerator(int storage[], int skillDouble = 0);
 void edgerunnerStatGenerator(int statBlock[][10], int stats[]);
 void determineGenerator(string classInput, character& storage);
@@ -53,6 +55,7 @@ void execEdgerunner(character& storage);
 void lawmenEdgerunner(character& storage);
 void fixerEdgerunner(character& storage);
 void nomadEdgerunner(character& storage);
+void rolelessEdgerunner(character& storage);
 
 void rockerboyComplete(character& storage);
 void soloComplete(character& storage);

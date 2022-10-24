@@ -17,8 +17,8 @@ int main()
 		return -1;
 	}
 
-	cout << "Please give the NPC a handle (--random for a random handle)" << endl; //NOTE FOR FUTURE SELF: ADD RANDOM NAME GENERATOR
-	cin.get(handleInput, 50);
+	cout << "Please give the NPC a handle: (--random for a random handle)" << endl;
+	cin.get(handleInput, 100);
 	if (strcmp(handleInput, "--random") == 0)
 		storage.handle = nameGenerator();
 	else
@@ -30,7 +30,7 @@ int main()
 		return -1;
 	}
 
-	cout << "Please input what role the NPC is:" << endl;
+	cout << "Please input what role the NPC is: (--noRole for no role)" << endl;
 	cout << "-Rockerboy, -Solo, -Netrunner, -Tech, -Medtech, -Media, -Exec, -Lawmen, -Fixer, -Nomad" << endl;
 	cin >> stringInput;
 
@@ -124,6 +124,13 @@ void arraySet(int skills[])
 	return;
 }
 
+string backstoryGenerator(int roleFlag)
+{
+	string result = " ";
+
+	return result;
+}
+
 void edgerunnerStatGenerator(int statBlock[][10], int stats[])
 {
 	int i = 0;
@@ -189,6 +196,8 @@ void determineGenerator(string classInput, character& storage)
 		fixerEdgerunner(storage);
 	if (classInput == "-Nomad")
 		nomadEdgerunner(storage);
+	if (classInput == "--noRole")
+		rolelessEdgerunner(storage);
 
 	return;
 }
@@ -915,5 +924,10 @@ void nomadEdgerunner(character& storage)
 	storage.skills[TRADING] = skills[18];
 	storage.skills[WILDERNESSSURVIVAL] = skills[19];
 
+	return;
+}
+
+void rolelessEdgerunner(character& storage)
+{
 	return;
 }
