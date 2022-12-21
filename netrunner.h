@@ -38,6 +38,7 @@ string nameGenerator();
 string backstoryGenerator(int roleFlag);
 void skillsGenerator(int storage[], int skillDouble = 0);
 void edgerunnerStatGenerator(int statBlock[][10], int stats[]);
+void rolelessStatGenerator(int stats[]);
 void determineGenerator(string classInput, character& storage);
 void outputCharacter(ifstream& input, ofstream& output, character storage);
 

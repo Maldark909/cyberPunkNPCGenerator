@@ -37,7 +37,7 @@ int main()
 	if (!(stringInput == "-Rockerboy" || stringInput == "-Solo" || stringInput == "-Netrunner" ||
 		stringInput == "-Tech" || stringInput == "-Medtech" || stringInput == "-Media" ||
 		stringInput == "-Exec" || stringInput == "-Lawmen" || stringInput == "-Fixer" ||
-		stringInput == "-Nomad"))
+		stringInput == "-Nomad" || stringInput == "--noRole"))
 	{
 		cout << "Please use the correct phrasing for input!" << endl;
 		return -1;
@@ -145,6 +145,35 @@ void edgerunnerStatGenerator(int statBlock[][10], int stats[])
 	stats[SERIOUSWOUND] = int(ceil(stats[HEALTH] / 2));
 	stats[DEATHSAVE] = stats[BODY];
 	stats[HUMANITY] = stats[EMP] * 10;
+}
+
+void rolelessStatGenerator(int stats[])
+{
+	int i = 0;
+	int statBlock[10][10] = {
+		7, 3, 4, 4, 3, 5, 5, 5, 3, 4,
+		5, 6, 5, 6, 4, 5, 6, 4, 5, 5,
+		7, 7, 8, 7, 8, 6, 6, 8, 7, 6,
+		4, 3, 4, 4, 3, 3, 4, 4, 3, 4,
+		5, 7, 5, 6, 7, 6, 5, 5, 6, 7,
+		5, 7, 7, 7, 7, 5, 6, 6, 5, 6,
+		8, 8, 8, 8, 7, 5, 6, 6, 7, 7,
+		6, 5, 6, 6, 6, 4, 4, 4, 6, 6,
+		5, 7, 6, 7, 7, 5, 7, 7, 6, 6,
+		3, 5, 3, 4, 3, 4, 4, 5, 4, 4 };
+
+	cout << endl << endl << "Generating Stats..." << endl;
+	while (i < 10)
+	{
+		stats[i] = statBlock[rand() % 10][i];
+		i = i + 1;
+	}
+	stats[HEALTH] = int(10 + (ceil((stats[BODY] + stats[WILL]) / 2) * 5));
+	stats[SERIOUSWOUND] = int(ceil(stats[HEALTH] / 2));
+	stats[DEATHSAVE] = stats[BODY];
+	stats[HUMANITY] = stats[EMP] * 10;
+
+	return;
 }
 
 void skillsGenerator(int storage[], int skillDouble)
@@ -682,6 +711,7 @@ void mediaEdgerunner(character& storage)
 		6, 7, 7, 5, 6, 8, 5, 5, 5, 7,
 		6, 5, 7, 5, 6, 7, 5, 5, 6, 6,
 		6, 6, 7, 4, 8, 7, 6, 7, 5, 8,
+		7, 5, 5, 4, 8, 7, 6, 7, 5, 8,
 		8, 5, 6, 3, 7, 6, 6, 5, 6, 7,
 		6, 5 ,6, 5, 6, 8, 6, 6, 7, 8,
 		7, 7, 5, 4, 6, 7, 6, 5, 6, 7,
@@ -887,7 +917,7 @@ void nomadEdgerunner(character& storage)
 		6, 6, 6, 3, 6, 7, 6, 7, 7, 4,
 		7, 6, 8, 4, 6, 7, 6, 5, 6, 5,
 		6, 7, 8, 4, 6, 6, 7, 5, 7, 5,
-		5, 7, 8, 1, 8, 6, 7, 5, 5, 5,
+		5, 7, 8, 5, 8, 6, 7, 5, 5, 5,
 		6, 7, 6, 4, 8, 6, 6, 6, 6, 6,
 		5, 6, 7, 4, 7, 8, 7, 7, 7, 4 };
 	int skills[20] = { 2, 2, 2, 2, 2, 2, 2,
@@ -929,5 +959,20 @@ void nomadEdgerunner(character& storage)
 
 void rolelessEdgerunner(character& storage)
 {
+	int i = 0;
+	int skills[20] = { 2, 2, 2, 2, 2, 2, 2,
+		2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+		2 };
+	rolelessStatGenerator(storage.stats);
+
+	storage.role = "ERROR: NO ROLE DETECTED IN NIGHT CITY DATABASE";
+	storage.roleAbility = "ERROR: NO ABILITY DETECTED IN NIGHT CITY DATABASE";
+
+	skillsGenerator(skills);
+	while (i < 20)
+	{
+		storage.skills[rand() % 66] = skills[i];
+		i = i + 1;
+	}
 	return;
 }
